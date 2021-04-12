@@ -58,4 +58,9 @@ public class NoteController {
         br.close();
         out.close();
     }
+
+    @GetMapping("/sss")
+    public String print (String s) {
+        return "sss";
+    }
 }

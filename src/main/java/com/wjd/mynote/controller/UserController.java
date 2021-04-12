@@ -20,6 +20,9 @@ public class UserController {
 
     @GetMapping("/getUserList")
     public List<User> getUserList(){
+
+
+
         return userMapper.getAllUser();
     }
 

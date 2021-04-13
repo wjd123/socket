@@ -39,11 +39,12 @@ public class SocketIoServlet extends HttpServlet {
             @Override
             public void call(Object... args) {
                 System.out.println("  ");
+                SocketIoSocket socket = (SocketIoSocket) args[0];
+                socket.send("foo", "bar arg", 1);
                 // Arugments from client available in 'args'
             }
         });
 
-//        namespace.send("foo", "bar arg", 1);
 
         namespace.broadcast("room", "foo", "bar arg");
 

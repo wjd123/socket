@@ -47,7 +47,7 @@ public class NoteController {
         byte[] buf = new byte[1024];
         int len = 0;
 
-        response.reset(); // 非常重要
+        response.reset(); //
 
         response.setContentType("application/x-msdownload");
         response.setHeader("Content-Disposition", "attachment; filename=" + f.getName());

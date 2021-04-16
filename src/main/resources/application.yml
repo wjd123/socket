@@ -1,11 +1,11 @@
-server:
-  port: 8081
-
 spring:
+  profiles:
+    active: app1
+
   datasource:
-    url: "jdbc:mysql://127.0.0.1:3306/changxu"
+    url: "jdbc:mysql://haloo.top:3306/chuangxu"
     username: "root"
-    password: "123456"
+    password: "ddb123698"
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
       # 下面为连接池的补充设置，应用到上面所有数据源中
@@ -13,6 +13,8 @@ spring:
     druid:
       min-idle: 5
       max-active: 30
+  jackson:
+      time-zone: Asia/Shanghai
 
 
   ## mybatis 配置
